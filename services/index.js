@@ -1,4 +1,5 @@
 var Promise=require('bluebird');
+var request=Promise.promisify(require('request'));
 
 function Services(){}
 
@@ -6,9 +7,9 @@ function Services(){}
 
 
 Services.prototype.login=function (){
-
-   
-   
+  
+    
+  
 
 }
 
