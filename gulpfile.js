@@ -11,7 +11,7 @@ var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache')
 
 const paths = {
-    js: './pubilc/js',
+    js: './pubilc/js/',
     dest: './public/dist/',
     css:'./public/css/',
     lib:'./public/lib/',
@@ -53,7 +53,7 @@ gulp.task('testImagemin', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest(paths.dest+'images/'));
 });
 
 

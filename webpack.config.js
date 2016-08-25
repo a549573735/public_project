@@ -14,7 +14,7 @@ module.exports = {
 
     //输出位置
     output: {
-        path: path.join(__dirname, './views/pages'), //配置输出路径，文件地址，使用绝对路径形式
+        path: path.join(__dirname, './public/dist'), //配置输出路径，文件地址，使用绝对路径形式
         filename: '[name].js',
         //关于filename 我们有个变量就是 [name] = entry的key  当然还有别的变量比如[id],[hash]等,大家可以自行发挥
         //我们也能把filename写成  filename : [name]/[name].[name].js 也是可以的
