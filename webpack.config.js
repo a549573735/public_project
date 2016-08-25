@@ -3,14 +3,37 @@ var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 // 模块导入
+//需要用到glob模块
+
+var glob = require('glob');
+   
+var getEntry = function () {
+        var entry = {};
+        //首先我们先读取我们的开发目录
+        glob.sync('./src/entry/*.js').forEach(function (name) {
+
+            var n = name.slice(name.lastIndexOf('entry/') + 6, name.length - 2);
+                n = n.slice(0, n.lastIndexOf('/'));
+            //接着我对路径字符串进行了一些裁剪成想要的路径
+            entry[n] = name;
+        });
+
+        /**
+        *    entry = {
+        *               'crowd/index' : './source/crowd/index/index.js',
+        *               'index/index' : './source/index/index/index.js'
+        *            }
+        *
+        **/
+        //最后返回entry  给 webpack的entry
+        return entry;
+ };
 
 
 
 module.exports = {
     // 入口文件地址，不需要写完，会自动查找
-    entry: {
-       index:'./entry/index',     
-    },
+    entry: getEntry(),
 
     //输出位置
     output: {
@@ -92,7 +115,7 @@ module.exports = {
         // 别名，可以直接使用别名来代表设定的路径以及其他
         alias: {
             filter: path.join(__dirname, './views/filters'),
-            components: path.join(__dirname, './views/components')
+            components: path.join(__dirname, './src/views/components')
         }
     },
     // plugins: [
@@ -111,34 +134,5 @@ module.exports = {
 
 
 
-
-
-
-
-
-
-
-    //需要用到glob模块
-
-    // var glob = require('glob');
-    // var getEntry = function () {
-    //     var entry = {};
-    //     //首先我们先读取我们的开发目录
-    //     glob.sync('./source/**/*.js').forEach(function (name) {
-    //         var n = name.slice(name.lastIndexOf('source/') + 7, name.length - 3);
-    //         n = n.slice(0, n.lastIndexOf('/'));
-    //         //接着我对路径字符串进行了一些裁剪成想要的路径
-    //         entry[n] = name;
-    //     });
-
-    //     console.log(entry);
-    //     /**
-    //     *    entry = {
-    //     *               'crowd/index' : './source/crowd/index/index.js',
-    //     *               'index/index' : './source/index/index/index.js'
-    //     *            }
-    //     *
-    //     **/
-    //     //最后返回entry  给 webpack的entry
-    //     return entry;
-    // };
+ 
+   

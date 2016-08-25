@@ -9,6 +9,6 @@ module.exports=function (app){
 
 		app.get('/', c_index.login);
 		
-
+		
 }
 
