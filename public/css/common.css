@@ -66,15 +66,17 @@ a:hover{ text-decoration: none;}
 .c-l ul{ width: 100%; position: relative; background: #f3f3f3;}
 .c-l ul >li{ width: 100%; min-height: 60px; font-size: 30px; text-align: center; border-bottom: 1px solid #cccccc; line-height: 60px; box-sizing: border-box;}
 .c-l ul >li >a{ height: 60px; color: #313131; width: 100%; display: block; line-height: 60px; text-decoration: none; border-bottom: 1px solid #cccccc;}
+.c-l ul >li >a i{ color:#438bd6; }
 .c-l ul >li:nth-last-child(1){ border-bottom: none;}
 .c-l ul >li dl{ width: 100%; position: relative; display: none; }
 .c-l ul >li dl dd{ width: 100%; position: relative; text-align: center; height: 60px;}
 .c-l ul >li dl dd a{ width: 100%; color: #313131; border-bottom: 1px solid #ccc; position: relative;display: block; font-size: 20px; text-decoration: none; text-align: center; height: 60px; line-height: 60px;}
 .c-l ul >li dl dd:nth-last-child(1) a{border-bottom: none;}
 .c-l ul >li a:hover{ background: #438bd6; color: #fff;}
+.c-l ul >li a:hover i{color: #fff;}
 
 
-.c-r{ width:950px; float: left;  background: yellow; min-height: 200px;}
+.c-r{ width:950px; float: left;  background: yellow; min-height: 200px; margin-bottom: 50px;}
 
 .c-f{ width: 100%; position: relative; height: 96px; background:#438bd6; display: table; visibility: hidden;}
 .c-f .c-text{ text-align: center; font-size: 20px; color: #fff; display: table-cell; vertical-align: middle; }
