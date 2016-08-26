@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div id="app">
-    	
-    </div>
-  </body>
+<% include ../common/header.ejs %>
 
-  <script type="text/javascript"  src="dist/index.js"></script>
-</html>
+<div class="c-content o-pad" id="c-content">
+    <div class="clearfix">
+       <% include ../common/leftNav.ejs %>
+        <div class="c-r">
+            <div id="app">
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ../common/footer.ejs %>
+<script type="text/javascript"  src="dist/index.js"></script>
+

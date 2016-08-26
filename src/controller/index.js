@@ -2,7 +2,7 @@
 
 exports.login=function(req, res, next) {
 
-   res.render('pages/index', { title: 'Express' });
+   res.render('pages/index', { title: 'Express',data:'123123' });
 
 }
 
