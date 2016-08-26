@@ -1,5 +1,5 @@
 
-var c_index=require('../controller/index');
+var c_index=require('../src/controller/index');
 
 
 

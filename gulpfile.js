@@ -12,14 +12,14 @@ var imagemin = require('gulp-imagemin'),
 
 const paths = {
     js: './pubilc/js/',
-    dest: './public/dist/',
+    dest: './public/build/',
     css:'./public/css/',
     lib:'./public/lib/',
     img:'./public/images/'
 
 };
 
-gulp.task('charging_css',function (){
+gulp.task('medical_css',function (){
 
     return gulp.src([
         paths.lib+'*.css',
@@ -27,12 +27,12 @@ gulp.task('charging_css',function (){
 
     ])
         .pipe(cssmin())
-        .pipe(concat('charging.min.css'))
+        .pipe(concat('medical.min.css'))
         .pipe(gulp.dest(paths.dest));
 
 })
 
-gulp.task('charging_js',function (){
+gulp.task('medical_js',function (){
 
     return gulp.src([
         paths.lib+'js/*.css',
@@ -40,7 +40,7 @@ gulp.task('charging_js',function (){
 
     ])
         .pipe(cssmin())
-        .pipe(concat('charging.min.js'))
+        .pipe(concat('medical.min.js'))
         .pipe(gulp.dest(paths.dest));
 
 })
@@ -59,5 +59,5 @@ gulp.task('testImagemin', function () {
 
 
 
-gulp.task("charging",['charging_css','charging_js','testImagemin']);
+gulp.task("charging",['medical_css','medical_js','testImagemin']);
 
