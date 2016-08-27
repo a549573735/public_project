@@ -12,9 +12,14 @@
             $lhead              : jQuery('#c-header'),
             $lMain              : jQuery('#c-content'),
             $lFooter            : jQuery('#c-footer'),
+            $lUMessage          : jQuery('#u-message'),
+            $lUserBtn           : jQuery('#u-btn'),
+            $lDate              : jQuery('.input-daterange')
       }
       this.listDown();
       this.contentHeight();
+      this.userMessage();
+      this.inputDate();
 
     }
     Common.prototype.listDown=function (obj){
@@ -22,10 +27,10 @@
             this.bclick= !this.bclick
             if(this.bclick){
                 $(this).find('i').attr('class','icon-caret-up')
-                $(this).next().css('display','block')
+                $(this).next().show()
             }else {
                 $(this).find('i').attr('class','icon-caret-down')
-                $(this).next().css('display','none')
+                $(this).next().hide()
             }
         })
     };
@@ -39,11 +44,42 @@
 
         if($hMain+$hHeader+$hFooter<$hWindow){
             var $lh=$hWindow-$hFooter-$hHeader;
-            this.uiInit.$lMain.css('min-height',$lh);
-            this.uiInit.$lFooter.css('visibility','inherit');
+            this.uiInit.$lMain.css({'min-height':$lh-50,'margin-bottom':'50px'});
         }
 
+            this.uiInit.$lMain.css({'margin-bottom':'50px'});
+            this.uiInit.$lFooter.css('visibility','inherit');
+
     }
+
+    Common.prototype.userMessage=function () {
+
+        this.uiInit.$lUserBtn.on('click',function (){
+
+            this.bclick= !this.bclick;
+
+           if(this.bclick){
+               $(this).next().show()
+           }else {
+               $(this).next().hide()
+           }
+
+        })
+    }
+
+    Common.prototype.inputDate=function () {
+
+        this.uiInit.$lDate.datepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            autoclose: true,
+            todayHighlight: true
+        })
+
+    }
+
+
+
 
 
 
