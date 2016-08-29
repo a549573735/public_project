@@ -1,6 +1,6 @@
 import Vue from "vue";
 
-import c_index from "../services/index.js"
+import c_index from "../services/index.js"  //数据层
 
 // import VueRouter from "vue-router";
 
@@ -10,20 +10,39 @@ import c_index from "../services/index.js"
 
 // 引入组件！
 
-import index from 'components/index.vue';
+ //组建 
+
+import index from 'components/index.vue';  
+import top from 'components/r-top.vue';  
+import tabBtns from 'components/tab-btns.vue';  
+import tabContent from 'components/tab-content.vue';
 
 
 
+// Vue.component('my-component', {
+//   template: '<div>A custom component!</div>'
+// })
 
-//开启debug模式
+// // 局部注册也可以这么做
+// var Parent = Vue.extend({
+// 	  components: {
+// 	    'my-component': {
+// 	      template: '<div>A custom component!</div>'
+// 	    }
+// 	  }
+// })
+
+Vue.component('my-top', top)
+Vue.component('my-tabBtns', tabBtns)
+Vue.component('my-tabContent', tabContent)
+
+// //开启debug模式
 
 Vue.config.debug = true;
 
-
-index.data= ()=> c_index.login() 
+ 
+index.data= ()=> c_index.login()  //
    
-
-
 
 // new Vue(app);//新建一个vue实例，现在使用vue-router就不需要了。
 
@@ -33,7 +52,9 @@ index.data= ()=> c_index.login()
 
 // var App = Vue.extend({});
 
- new Vue(index)
+new Vue(index)
+
+
 
 
 
