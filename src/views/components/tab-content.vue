@@ -1,7 +1,7 @@
 <script>
 
 	export default {
-	    el:'#vtabContent',
+	    
 	    methods: {
 	        
 	    }
