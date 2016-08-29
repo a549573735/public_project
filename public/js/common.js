@@ -73,7 +73,8 @@
             language: 'zh-CN',
             weekStart: 1,
             autoclose: true,
-            todayHighlight: true
+            todayHighlight: true,
+            format: 'yyyy/mm/dd'
         })
 
     }

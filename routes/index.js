@@ -15,7 +15,6 @@ module.exports=function (app){
 
 		app.get('/ccc', c_index.ccc);
 
-
 		app.get('/ddd', c_index.ddd);
 		
 }
