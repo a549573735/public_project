@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 var c_index=require('../src/controller/index');
 
 module.exports=function (app){
 	app.get('/', c_index.login);
 	app.get('/zxp', c_index.zxp);
 };
-=======
 
 var c_index=require('../src/controller/index');
 
@@ -28,5 +26,4 @@ module.exports=function (app){
 		app.get('/common' ,c_index.common);
 		
 }
->>>>>>> f114229ddf95198e9e8f0484e13e9b18f7be71b2
 
