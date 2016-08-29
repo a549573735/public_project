@@ -9,7 +9,6 @@ exports.login=function(req, res, next) {
 
    res.render('pages/index', { title: 'Express',data:'123123' });
      
-  
 }
 
 
@@ -37,15 +36,14 @@ exports.ccc=function(req, res, next) {
 
 exports.ddd=function(req, res, next) {
 
-
    res.render('pages/shichangsuo', { title: 'Express',data:'123123' });
 
 }
 
 
-exports.common=function(req, res, next) {
+exports.common = function(req, res, next) {
 
-   res.render('pages/common', { title: 'Express',data:'123123' });
+   res.render('pages/vue-common', { title: 'Express',data:'123123' });
 
 }
 
