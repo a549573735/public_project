@@ -5,7 +5,6 @@
 
 
 
-<<<<<<< HEAD
 exports.login = function(req, res, next) {
    res.render('pages/index', { title: 'Express' });
 };
@@ -15,7 +14,6 @@ exports.zxp = function(req, res, next) {
       title: 'zxp'
    });
 };
-=======
 exports.login=function(req, res, next) {
 
    res.render('pages/index', { title: 'Express',data:'123123' });
@@ -62,4 +60,3 @@ exports.common = function(req, res, next) {
 
 
 
->>>>>>> f114229ddf95198e9e8f0484e13e9b18f7be71b2
