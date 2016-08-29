@@ -2,12 +2,8 @@
 
 export default {
     el:'#app',
-    data() {
-        return {
-            name: "guowenfh",
-            age: "21"
-        }
-    }, methods: {
+
+    methods: {
         golist() {
             this.$route.router.go({
                 name: "list"
@@ -19,6 +15,7 @@ export default {
 
 </script>
 <template>
+     {{data.title}}+{{data.data}}+123123
 
     <div class="page page-current" id="pic-list">
         <nav class="bar bar-tab">

@@ -17,6 +17,8 @@ module.exports=function (app){
 
 
 		app.get('/ddd', c_index.ddd);
+
+		app.get('/common',c_index.common)
 		
 }
 
