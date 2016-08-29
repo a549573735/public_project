@@ -13,9 +13,7 @@ import c_index from "../services/index.js"  //数据层
  //组建 
 
 import index from 'components/index.vue';  
-import top from 'components/r-top.vue';  
-import tabBtns from 'components/tab-btns.vue';  
-import tabContent from 'components/tab-content.vue';
+
 
 
 
@@ -32,9 +30,6 @@ import tabContent from 'components/tab-content.vue';
 // 	  }
 // })
 
-Vue.component('my-top', top)
-Vue.component('my-tabBtns', tabBtns)
-Vue.component('my-tabContent', tabContent)
 
 // //开启debug模式
 

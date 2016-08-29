@@ -1,8 +1,10 @@
+
 <script>
+   
 
 	export default {
-	    el:'#vtop',
 	   
+	    el:'#v-top',
 	    methods: {
 	        
 	    }
