@@ -1,3 +1,4 @@
+
 /**
  * Created by lixiang on 16/8/26.
  */
@@ -14,22 +15,27 @@
             $lFooter            : jQuery('#c-footer'),
             $lUMessage          : jQuery('#u-message'),
             $lUserBtn           : jQuery('#u-btn'),
-            $lDate              : jQuery('.input-daterange')
-      }
+            $lDate              : jQuery('.input-daterange').add('.js-datepicker'),
+            $lMinModal          : jQuery('.v-modal-min'),
+            $lMinBtn            : jQuery('.v-min-toggle')
+      };
+
       this.listDown();
       this.contentHeight();
       this.userMessage();
       this.inputDate();
+      this.minModal();
 
     }
+
     Common.prototype.listDown=function (obj){
         this.obj.on('click',function (){
             this.bclick= !this.bclick
             if(this.bclick){
-                $(this).find('i').attr('class','icon-caret-up')
+                $(this).find('i').attr('class','icon-caret-down')
                 $(this).next().show()
             }else {
-                $(this).find('i').attr('class','icon-caret-down')
+                $(this).find('i').attr('class','icon-caret-right')
                 $(this).next().hide()
             }
         })
@@ -75,9 +81,88 @@
             autoclose: true,
             todayHighlight: true,
             format: 'yyyy/mm/dd'
+
         })
 
     }
+    Common.prototype.minModal=function () {
+
+         this.uiInit.$lMinBtn.on('click',function (){
+             this.bclick=!this.bclick;
+            if(this.bclick){
+
+              $(this).next().show().animate({opacity:'1'})
+
+            }else {
+
+               $(this).next().animate({opacity:'0'},function (){
+                    $(this).hide()
+               })
+            }
+         })
+
+    }
+
+
+
+//checkbox  uiHelperTableToolsCheckable();
+
+var uiHelperTableToolsCheckable = function() {
+    var $table = jQuery('.js-table-checkable');
+    var $allCheck=jQuery('#v-all-check');
+
+    jQuery('input:checkbox', $allCheck).click(function() {
+        var $checkedStatus = jQuery(this).prop('checked');
+
+        this.bClick=!this.bClick
+        if(this.bClick){
+            jQuery(this).closest('#v-all-check').addClass('active');
+        }else {
+            jQuery(this).closest('#v-all-check').removeClass('active');
+        }
+
+        jQuery('tbody input:checkbox', $table).each(function() {
+
+            var $checkbox = jQuery(this);
+            $checkbox.prop('checked', $checkedStatus);
+            uiHelperTableToolscheckRow($checkbox, $checkedStatus);
+        });
+    });
+
+
+    jQuery('tbody input:checkbox', $table).click(function() {
+        var $checkbox = jQuery(this);
+
+
+        uiHelperTableToolscheckRow($checkbox, $checkbox.prop('checked'));
+    });
+
+
+    jQuery('tbody > tr', $table).click(function(e) {
+        if (e.target.type !== 'checkbox'
+            && e.target.type !== 'button'
+            && e.target.tagName.toLowerCase() !== 'a'
+            && !jQuery(e.target).parent('label').length) {
+            var $checkbox       = jQuery('input:checkbox', this);
+            var $checkedStatus  = $checkbox.prop('checked');
+            console.log(!$checkedStatus)
+            $checkbox.prop('checked', ! $checkedStatus);
+            uiHelperTableToolscheckRow($checkbox, ! $checkedStatus);
+        }
+    });
+};
+
+var uiHelperTableToolscheckRow = function($checkbox, $checkedStatus) {
+    if ($checkedStatus) {
+        $checkbox
+            .closest('tr')
+            .addClass('active');
+    } else {
+        $checkbox
+            .closest('tr')
+            .removeClass('active');
+    }
+};
 
 
 
