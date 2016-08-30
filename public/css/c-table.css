@@ -37,8 +37,9 @@ label{font-weight: normal; color: #313131;}
 
 .v-table-tr th{font-size: 16px; }
 .v-tabs-modal{ width: 950px !important;}
-.v-label{ font-size: 18px !important; padding-left: 15px; width: 120px; margin-top: 7px;}
-.v-label-s{font-size: 18px !important;width: 80px; margin-top: 7px; }
+.v-label-l{  font-size: 18px !important; padding-left: 15px; width: 120px; margin-top: 7px; }
+.v-label{ font-size: 18px !important; padding-left: 15px; width: 90px; margin-top: 7px;}
+.v-label-s{font-size: 18px !important;width: 60px; margin-top: 7px; }
 
 
 .v-tabs-title{ padding-bottom: 20px;}
