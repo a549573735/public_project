@@ -2,6 +2,7 @@ import Vue from "vue";
 
 import c_index from "../services/index.js"  //数据层
 
+
 // import VueRouter from "vue-router";
 
 // Vue.use(VueRouter);
@@ -14,33 +15,12 @@ import c_index from "../services/index.js"  //数据层
 
 import index from 'components/index.vue';  
 import top from 'components/r-top.vue';  
-import tabBtns from 'components/tab-btns.vue';  
-import tabContent from 'components/tab-content.vue';
+import tabsBtns from 'components/tab-btns.vue';  
+import tabContent from 'components/tab-content.vue';  
 
-
-
-// Vue.component('my-component', {
-//   template: '<div>A custom component!</div>'
-// })
-
-// // 局部注册也可以这么做
-// var Parent = Vue.extend({
-// 	  components: {
-// 	    'my-component': {
-// 	      template: '<div>A custom component!</div>'
-// 	    }
-// 	  }
-// })
-
-
-var App = index.extend({
-    components:{
-    	'my-tabContent':tabContent,
-    	'my-top':top,
-    	'my-tabBtns':tabBtns,
-
-    }
-});
+Vue.component('my-top',top)
+Vue.component('my-tabsbtn',tabsBtns)
+Vue.component('my-tabcontent',tabContent)
 
 
 // //开启debug模式

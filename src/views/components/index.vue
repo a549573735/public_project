@@ -1,30 +1,24 @@
+
 <script>
 
-export default {
-    el:'#app',
 
-    methods: {
-        golist() {
-            this.$route.router.go({
-                name: "list"
-            });
-        }
-    }
+export default {
+      el:'#app',
+    
+      methods: {
+          
+         
+      }
 }
 
 </script>
-<template>
-   {{data.title}}+{{data.data}}
-   <div id="vtop">
-       <my-top></mytop>
-       myTabContent
-   </div>
-   <div class="block">
-          <my-tabBtns> </my-tabBtns>
-     
 
-        <my-tabContent></my-tabContent>
-    </div>
+<template >
+      <div class="block">
+              <my-top></my-top>
+              <my-tabsbtn></my-tabsbtn>
+              <my-tabcontent></my-tabcontent> 
+      <div>
 
 </template>
 <style lang="sass">

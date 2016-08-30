@@ -1,0 +1,123 @@
+
+<% include ../common/header.ejs %>
+
+<div class="c-content o-pad" id="c-content">
+    <div class="clearfix">
+       <% include ../common/leftNav.ejs %>
+         <div class="c-r">
+            <form class="form-horizontal clearfix"  method="post" onsubmit="return false;">
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="col-md-1 o-pd v-label" for="val-skill"><input class="radio-m" name="val-skill" checked="" type="radio"><span></span>市场所</label>
+
+                            <label class="col-md-1 o-pd v-label-s" for="val-skill"><input class="radio-m" name="radio-group10" type="radio"><span></span>企业：</label>
+                            <div class="col-md-2 o-pd-l">
+                                <select class="form-control"  name="val-skill">
+                                    <option value="">雅为</option>
+                                    <option value="html">雅为</option>
+                                    <option value="css">雅为</option>
+                                    <option value="javascript">雅为</option>
+                                    <option value="ruby">雅为</option>
+                                    <option value="php">雅为</option>
+                                    <option value="asp">雅为</option>
+                                    <option value="python">雅为</option>
+                                    <option value="mysql">雅为</option>
+                                </select>
+                            </div>
+
+                            <label class="col-md-1 o-pd v-label-s" for="val-skill"><input class="radio-m" name="radio-group10" type="radio"><span></span>园区：</label>
+                            <div class="col-md-2 o-pd-l">
+                                <select class="form-control" name="val-skill">
+                                    <option value="">雅为</option>
+                                    <option value="html">雅为</option>
+                                    <option value="css">雅为</option>
+                                    <option value="javascript">雅为</option>
+                                    <option value="ruby">雅为</option>
+                                    <option value="php">雅为</option>
+                                    <option value="asp">雅为</option>
+                                    <option value="python">雅为</option>
+                                    <option value="mysql">雅为</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row v-table">
+                <div class="col-md-12">
+                    <div class="block">
+                        <table class="table table-borderless o-m-t">
+                            <tbody>
+                            <tr>
+                                <td class="text-right zj-ys" style="width:35%;">姓名：</td>
+                                <td class="text-left" style="width:65%;"><div class="zj-text"><input type="text" class="form-control"></div></td></tr>
+
+                            <tr>
+                                <td class="text-right zj-ys" style="width:35%;">用户名：</td>
+                                <td class="text-left" style="width:65%;"><div class="zj-text"><input type="text" class="form-control"></div></td></tr>
+
+                            <tr>
+                                <td class="text-right zj-ys" style="width:35%;">手机号：</td>
+                                <td class="text-left" style="width:65%;"><div class="zj-text"><input type="text" class="form-control"></div></td></tr>
+                            <tr>
+                                <td class="text-right zj-ys" style="width:35%;">邮箱：</td>
+                                <td class="text-left" style="width:65%;"><div class="zj-text"><input type="text" class="form-control"></div></td></tr>
+                            <tr>
+                                <td class="text-right zj-ys" style="width:35%;"><label class="o-pd" for="val-skill">角色：</label></td>
+                                <td class="text-left" style="width:65%;">
+                                    <select class="form-control zj-text" id="val-skill" name="val-skill">
+                                    <option value="">Please select</option>
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="javascript">Javascript</option>
+                                    <option value="ruby">Ruby</option>
+                                    <option value="php">PHP</option>
+                                    <option value="asp">ASP.NET</option>
+                                    <option value="python">Python</option>
+                                    <option value="mysql">MySQL</option>
+                                </select></td></tr>
+                            </tbody>
+                        </table>
+                        <table style="width:100%;">
+                          <tr>
+                           <td style=" width:45%"><div class="v-t-m">
+                                <button class=" btn btn-md btn-primary btn-block  " type="submit">确定</button>
+                            </div></td>
+                            <td style=" width:10%"></td>
+                            <td  style=" width:45%"><div class="v-t-b">
+                                <button class=" btn btn-md btn-primary btn-block" type="reset">取消</button>
+                            </div></td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+</div>
+
+<script type="text/javascript"  src="dist/index.js"></script>
+<% include ../common/footer.ejs %>
+<% include ../common/modals.ejs %>
+
+<script>
+
+    var navTabs=$('#v-nav-tab');
+    var contentTabs=$('.v-tab-content');
+
+    navTabs.on('click','li',function (){
+
+        $(this).addClass('active').siblings().removeClass('active');
+        contentTabs.children().removeClass('active').eq($(this).index()).addClass('active')
+
+    })
+
+    uiHelperTableToolsCheckable();
+
+</script>
+
+
+       
