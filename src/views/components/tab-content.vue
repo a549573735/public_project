@@ -1,17 +1,20 @@
 <script>
 
+
 	export default {
-	    el:'#vtabContent',
+	    el:'#vtop',
+	   
 	    methods: {
 	        
-	    }
+	    },
+	 
 	}
 
 
 </script>    
 
-<template>
-			<div class="block-content tab-content v-tab-content">
+<template  >
+			<div class="block-content tab-content v-tab-content" id="v-tab-content">
 			                <div class="tab-pane active">
 			                    <div class="v-tabs-date">
 			                        <form class="form-horizontal clearfix"  method="post" onsubmit="return false;">

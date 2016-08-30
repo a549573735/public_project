@@ -16,15 +16,14 @@ export default {
 <template>
    {{data.title}}+{{data.data}}
    <div id="vtop">
-       <my-top></my-top>
+       <my-top></mytop>
+       myTabContent
    </div>
    <div class="block">
-           <div id="vtab">
-                 <my-tabBtns></my-tabBtns>
-           </div>
-           <div id="vtabContent">
-                 <my-tabContent></my-tabContent>
-           </div>
+          <my-tabBtns> </my-tabBtns>
+     
+
+        <my-tabContent></my-tabContent>
     </div>
 
 </template>

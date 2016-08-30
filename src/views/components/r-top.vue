@@ -5,14 +5,15 @@
 	   
 	    methods: {
 	        
-	    }
+	    },
+	 
 	}
 
 </script>    
 
 
-<template>
-     <div class="v-tabs-title">
+<template >
+     <div class="v-tabs-title"  id="v-tab-title">
                 <div class="block">
                     <div class="block-header clearfix">
                         <div class="col-md-12 o-pd">

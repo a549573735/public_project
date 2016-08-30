@@ -10,7 +10,7 @@ import c_index from "../services/index.js"  //数据层
 
 // 引入组件！
 
- //组建 
+//组建 
 
 import index from 'components/index.vue';  
 import top from 'components/r-top.vue';  
@@ -32,9 +32,16 @@ import tabContent from 'components/tab-content.vue';
 // 	  }
 // })
 
-Vue.component('my-top', top)
-Vue.component('my-tabBtns', tabBtns)
-Vue.component('my-tabContent', tabContent)
+
+var App = index.extend({
+    components:{
+    	'my-tabContent':tabContent,
+    	'my-top':top,
+    	'my-tabBtns':tabBtns,
+
+    }
+});
+
 
 // //开启debug模式
 
@@ -52,7 +59,7 @@ index.data= ()=> c_index.login()  //
 
 // var App = Vue.extend({});
 
-new Vue(index)
+new Vue(App)
 
 
 
