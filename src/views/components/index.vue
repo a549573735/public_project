@@ -4,7 +4,6 @@
 
 export default {
       el:'#app',
-    
       methods: {
           
          

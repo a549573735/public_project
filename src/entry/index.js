@@ -39,7 +39,7 @@ index.data= ()=> c_index.login()  //
 
 // var App = Vue.extend({});
 
-new Vue(App)
+new Vue(index)
 
 
 

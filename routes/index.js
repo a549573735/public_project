@@ -44,9 +44,6 @@ module.exports=function (app){
 	app.get('/order/list', c_index.yyjc_lb);         //预约列表
 
 
-
-
-
 };
 
 
