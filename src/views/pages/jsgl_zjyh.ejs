@@ -1,0 +1,125 @@
+<% include ../common/header.ejs %>
+
+<div class="c-content o-pad" id="c-content">
+    <div class="clearfix">
+       <% include ../common/leftNav.ejs %>
+       <div class="c-r">
+            <form class="form-horizontal clearfix"  method="post" onsubmit="return false;">
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="col-md-1 o-pd v-label" for="val-skill"><input class="radio-m" name="radio-group10" checked="" type="radio"><span></span>市场所</label>
+
+                            <label class="col-md-1 o-pd v-label-s" for="val-skill"><input class="radio-m" name="radio-group10" type="radio"><span></span>企业：</label>
+                            <div class="col-md-2 o-pd-l">
+                                <select class="form-control"  name="val-skill">
+                                    <option value="">雅为</option>
+                                    <option value="html">雅为</option>
+                                    <option value="css">雅为</option>
+                                    <option value="javascript">雅为</option>
+                                    <option value="ruby">雅为</option>
+                                    <option value="php">雅为</option>
+                                    <option value="asp">雅为</option>
+                                    <option value="python">雅为</option>
+                                    <option value="mysql">雅为</option>
+                                </select>
+                            </div>
+
+                            <label class="col-md-1 o-pd v-label-s" for="val-skill"><input class="radio-m" name="radio-group10" type="radio"><span></span>园区：</label>
+                            <div class="col-md-2 o-pd-l">
+                                <select class="form-control" name="val-skill">
+                                    <option value="">雅为</option>
+                                    <option value="html">雅为</option>
+                                    <option value="css">雅为</option>
+                                    <option value="javascript">雅为</option>
+                                    <option value="ruby">雅为</option>
+                                    <option value="php">雅为</option>
+                                    <option value="asp">雅为</option>
+                                    <option value="python">雅为</option>
+                                    <option value="mysql">雅为</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+            <div class="row v-table">
+                <div class="col-md-12">
+                    <div class="block">
+                        <table class="table table-borderless table_ad o-m-t">
+                            <tbody>
+                            <tr>
+                                <td class="text-right zj-ys" style="width:20%;">角色名：</td>
+                                <td class="text-left" style="width:80%;"><div class="zj-text"><input type="text" class="form-control"></div></td></tr>
+
+                            <tr>
+                                <td class="text-right zj-ys">权限：</td>
+                                <td class="text-left">
+                                <label class="o-pd add-lb"><input class="radio-m" type="checkbox">平级用户管理</label>
+                                <label class="o-pd add-lb"><input class="radio-m" type="checkbox">下级用户管理</label></td></tr>
+
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">企业信息</label></td></tr>
+
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">网络检查列表</label></td></tr>
+
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">预约检查列表</label>
+                                <label class="o-pd add-lb"><input class="radio-m" type="checkbox">预约检查</label></td></tr>
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">行政约谈列表</label>
+                                <label class="o-pd add-lb"><input class="radio-m" type="checkbox">行政约谈</label></td></tr>
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">行政建议列表</label>
+                                <label class="o-pd add-lb"><input class="radio-m" type="checkbox">行政建议</label></td></tr>
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left"><label class="o-pd add-lb"><input class="radio-m" type="checkbox">年报公示列表</label></td></tr>    
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-left add-hei"></tr>    
+                                <td class="text-center"></td>
+                                <td class="text-left"><div class="add-qd"><input class="btn btn-md btn-primary btn-block" type="button" value="确定"></div></tr>    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript"  src="dist/index.js"></script>
+<% include ../common/footer.ejs %>
+<% include ../common/modals.ejs %>
+
+<script>
+
+    var navTabs=$('#v-nav-tab');
+    var contentTabs=$('.v-tab-content');
+
+    navTabs.on('click','li',function (){
+
+        $(this).addClass('active').siblings().removeClass('active');
+        contentTabs.children().removeClass('active').eq($(this).index()).addClass('active')
+
+    })
+
+    uiHelperTableToolsCheckable();
+
+</script>
+
+
+
+
+        
