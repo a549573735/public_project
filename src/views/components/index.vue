@@ -10,9 +10,11 @@ export default {
       }
 }
 
+
 </script>
 
 <template >
+
       <div class="block">
               <my-top></my-top>
               <my-tabsbtn></my-tabsbtn>

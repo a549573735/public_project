@@ -5,7 +5,7 @@ var c_index=require('../src/controller/index');
 
 module.exports=function (app){
 	
-	app.get('/', c_index.index);
+	app.get('/', c_index.index);       //公共模块
 
 	app.get('/zxp',c_index.zxp);
 

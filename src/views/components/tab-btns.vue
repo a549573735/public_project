@@ -16,7 +16,6 @@
 <template>
 	<ul class="nav nav-tabs nav-justified "  id="v-nav-tab">
 
-
 	                    <li class="active">
 	                        <a href="javascript:;"> 企业信息</a>
 	                    </li>

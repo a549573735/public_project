@@ -146,8 +146,6 @@ exports.yyjc_lb = function(req, res, next) {
 
 
 
-
-
 exports.qjjr_qy = function(req, res, next) {
 
    res.render('pages/qjjr_qy', { title: 'Express',data:'123123' });
@@ -184,8 +182,11 @@ exports.qijujinru = function(req, res, next) {
 }
 
 
+
 exports.wljc_lb = function(req, res, next) {
 
    res.render('pages/wljc_lb', { title: 'Express',data:'123123' });
 
 }
+
+

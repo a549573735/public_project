@@ -3,7 +3,7 @@
    
 
 	export default {
-	   
+
 	    methods: {
 	        
 	    },
@@ -21,6 +21,7 @@
                             <h3 class="block-title">上海医德医疗设备有限公司</h3>
                         </div>
                         <div class="col-md-8 col-md-offset-4 text-right o-pd clearfix">
+
                             <div class="v-item-btn">
                                 <button class="btn btn-minw btn-primary v-tabs-btn" data-toggle="modal"data-target="#modal-fromleft"  type="button">退出</button>
                             </div>
@@ -122,5 +123,4 @@
                     </div>
                 </div>
             </div>
-
 </template>  
