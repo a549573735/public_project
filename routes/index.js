@@ -7,6 +7,8 @@ module.exports=function (app){
 	
 	app.get('/', c_index.index);
 
+	app.get('/zxp',c_index.zxp);
+
 	app.get('/company/scs',c_index.dwgl_scs);
 
 	app.get('/company/yq', c_index.dwgl_yq);
