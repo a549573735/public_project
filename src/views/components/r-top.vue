@@ -31,9 +31,7 @@
                                 <div class="v-modal-min">
                                     <div class="form-group clearfix o-mg">
 
-
                                         <div class="form-group ">
-
                                             <label class="col-md-3 control-label " for="val-suggestions">建议:</label>
                                             <div class="col-md-8 o-pd">
                                                 <textarea class="form-control"  name="val-suggestions" rows="8" placeholder=""></textarea>

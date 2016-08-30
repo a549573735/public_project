@@ -16,6 +16,7 @@
                     },
                    components:{
                      'v-table':require('../common/table.vue'),
+                     'v-search':require('../common/search.vue')
                    }
         }
 
@@ -23,31 +24,10 @@
 
 <template  >
 				<div class="tab-pane">
-                        <div class="v-tabs-date">
-                            <form class="form-horizontal clearfix" action="" method="post" onsubmit="return false;">
-                               <div class="col-md-12">
-                                   <div class="form-group clearfix">
-                                    <label class="col-md-2 o-pd v-fz" >产品名称:</label>
-                                    <div class="col-md-5 ">
-                                        <div class="col-md-8 o-pd">
-                                            <input class="form-control" type="text" id="example-if-password" name="example-if-password" placeholder="">
+                       
+                          <v-search></v-search>
+                          <v-table  :mydata='data' :style='style'></v-table>
 
-                                        </div>
-
-                                        <div class="col-md-4 ">
-                                            <button class="btn btn-default btn-primary" type="submit">查询</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </form>
-                        </div>
-
-
-                          <v-table :style='style' :data='data'></v-table>
-
-
-
-                    </div>
+         </div>
 
 </template>

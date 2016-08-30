@@ -5,26 +5,27 @@
 
 
     function Common(obj){
-      this.obj=$(obj)   //下拉;
-      this.uiInit = {
-            // Set variables
-            $lHtml              : jQuery('html'),
-            $lBody              : jQuery('body'),
-            $lhead              : jQuery('#c-header'),
-            $lMain              : jQuery('#c-content'),
-            $lFooter            : jQuery('#c-footer'),
-            $lUMessage          : jQuery('#u-message'),
-            $lUserBtn           : jQuery('#u-btn'),
-            $lDate              : jQuery('.input-daterange').add('.js-datepicker'),
-            $lMinModal          : jQuery('.v-modal-min'),
-            $lMinBtn            : jQuery('.v-min-toggle')
-      };
+        
+          this.obj=$(obj)   //下拉;
+          this.uiInit = {
+                // Set variables
+                $lHtml              : jQuery('html'),
+                $lBody              : jQuery('body'),
+                $lhead              : jQuery('#c-header'),
+                $lMain              : jQuery('#c-content'),
+                $lFooter            : jQuery('#c-footer'),
+                $lUMessage          : jQuery('#u-message'),
+                $lUserBtn           : jQuery('#u-btn'),
+                $lDate              : jQuery('.input-daterange').add('.js-datepicker'),
+                $lMinModal          : jQuery('.v-modal-min'),
+                $lMinBtn            : jQuery('.v-min-toggle')
+          };
 
-      this.listDown();
-      this.contentHeight();
-      this.userMessage();
-      this.inputDate();
-      this.minModal();
+          this.listDown();
+          this.contentHeight();
+          this.userMessage();
+          this.inputDate();
+          this.minModal();
 
     }
 

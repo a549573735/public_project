@@ -33,7 +33,9 @@ var getEntry = function () {
 
 module.exports = {
     // 入口文件地址，不需要写完，会自动查找
-    entry: getEntry(),
+    entry: {
+        'index':'./src/entry/index',
+    },
 
     //输出位置
     output: {
